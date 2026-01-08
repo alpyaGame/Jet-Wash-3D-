@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jet Wash 3D - Rahatla ve Temizle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* --- GENEL AYARLAR --- */
+        :root {
+            --primary: #00c6ff; /* Açık Su Mavisi */
+            --secondary: #0072ff; /* Koyu Okyanus Mavisi */
+            --accent: #ffdd00; /* Enerjik Sarı (Butonlar için) */
+            --dark: #333;
+            --light: #f4f9ff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a { text-decoration: none; }
+        ul { list-style: none; }
+
+        /* --- HEADER & NAV --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            position: absolute;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo span { color: var(--accent); }
+
+        /* --- HERO BÖLÜMÜ (Giriş) --- */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 5%;
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); /* Alt tarafı eğimli kesim */
+        }
+
+        .hero-content {
+            flex: 1;
+            color: white;
+            animation: slideInLeft 1s ease-out;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 500px;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .hero-image img {
+            max-width: 300px;
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            border: 8px solid white;
+        }
+
+        /* --- İNDİRME BUTONLARI --- */
+        .download-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-store {
+            background: #000;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.3s;
+        }
+
+        .btn-store:hover { transform: translateY(-3px); }
+        .btn-store i { font-size: 1.5rem; }
+        .btn-text { display: flex; flex-direction: column; font-size: 0.7rem; line-height: 1.2; }
+        .btn-text span { font-size: 1rem; font-weight: 600; }
+
+        /* --- ÖZELLİKLER (FEATURES) --- */
+        .features {
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--secondary);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .feature-card:hover { transform: translateY(-10px); }
+
+        .icon-box {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        /* --- GALERİ BÖLÜMÜ --- */
+        .gallery {
+            background: #eef6ff;
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .screenshot-container {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding-bottom: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .screenshot {
+            width: 200px;
+            height: 400px; /* Telefon oranı */
+            background: #ccc;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .screenshot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px 5%;
+            text-align: center;
+        }
+
+        footer p { opacity: 0.6; font-size: 0.9rem; margin-top: 10px; }
+
+        /* --- ANİMASYONLAR --- */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* --- MOBİL UYUMLULUK --- */
+        @media (max-width: 768px) {
+            .hero { flex-direction: column; text-align: center; height: auto; padding-top: 120px; padding-bottom: 50px; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .hero-image { margin-top: 40px; }
+            .download-buttons { justify-content: center; }
+            .screenshot-container { justify-content: flex-start; } /* Mobilde kaydırılabilir olsun */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">JET WASH <span>3D</span></div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Dünyayı Temizle,<br>Sanatını Yarat!</h1>
+            <p>Basınçlı suyun rahatlatıcı gücünü keşfet. Kirli nesneleri temizle, sanat galerini doldur ve stresini at.</p>
+            
+            <div class="download-buttons">
+                <a href="#" class="btn-store">
+                    <i class="fab fa-apple"></i>
+                    <div class="btn-text">
+                        Download on the <br><span>App Store</span>
+                    </div>
+                </a>
+                <a href="#" class="btn-store">
+                    <i class="fab fa-google-play"></i>
+                    <div class="btn-text">
+                        GET IT ON <br><span>Google Play</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="https://via.placeholder.com/300x600/0072ff/ffffff?text=Oyun+Gorseli" alt="Jet Wash 3D Screenshot">
+        </div>
+    </section>
+
+    <section class="features">
+        <h2 class="section-title">Neden Oynamalısın?</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="icon-box"><i class="fas fa-soap"></i></div>
+                <h3>ASMR Temizlik</h3>
+                <p>Gerçekçi su fiziği ve tatmin edici ses efektleri ile beynini rahatlat.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-box"><i class="fas fa-palette"></i></div>
+                <h3>Sanat Galerisi</h3>
+                <p>Temizlediğin objeleri kendi özel sanat galerinde sergile ve koleksiyonunu tamamla.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon-box"><i class="fas fa-mobile-alt"></i></div>
+                <h3>Kolay Kontroller</h3>
+                <p>Tek parmakla oynanabilen, herkes için basit ve eğlenceli joystick kontrolü.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <h2 class="section-title">Oyun İçi Görüntüler</h2>
+        <div class="screenshot-container">
+            <div class="screenshot">
+                <img src="https://via.placeholder.com/200x400/333/fff?text=Temizlik" alt="Oyun 1">
+            </div>
+            <div class="screenshot">
+                <img src="https://via.placeholder.com/200x400/444/fff?text=Galeri" alt="Oyun 2">
+            </div>
+            <div class="screenshot">
+                <img src="https://via.placeholder.com/200x400/555/fff?text=Boyama" alt="Oyun 3">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="logo">JET WASH <span>3D</span></div>
+        <p>&copy; 2024 Tüm Hakları Saklıdır. | Gizlilik Politikası</p>
+    </footer>
+
+</body>
+</html>
