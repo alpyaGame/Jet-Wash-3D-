@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gizlilik Politikası | Jet Wash 3D</title>
+  <meta name="description" content="Jet Wash 3D Gizlilik Politikası" />
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.7;margin:0;background:#fff;color:#111}
+    .wrap{max-width:920px;margin:0 auto;padding:28px 18px 60px}
+    h1{font-size:28px;margin:8px 0 10px}
+    h2{font-size:18px;margin:26px 0 8px}
+    p,li{font-size:15px}
+    .card{background:#f6f7f9;border:1px solid #e6e8ec;border-radius:14px;padding:14px 14px;margin:14px 0}
+    .muted{opacity:.75}
+    a{color:#0b5cff}
+    code{background:#f1f3f6;border:1px solid #e6e8ec;padding:2px 6px;border-radius:8px}
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <h1>Gizlilik Politikası</h1>
+    <p class="muted">
+      Uygulama: <b>Jet Wash 3D</b> (veya uygulama adınız)<br/>
+      Geliştirici: <b>[Geliştirici Adı]</b><br/>
+      Yürürlük Tarihi: <b>10 Ocak 2026</b><br/>
+      İletişim: <b>[İletişim E-postası]</b><br/>
+      Web: <b>[Web Site Adresi]</b>
+    </p>
+
+    <div class="card">
+      <p><b>Özet:</b> Jet Wash 3D bir mobil oyundur. Uygulamada hesap oluşturma yoktur. Uygulamayı çalıştırmak, performansı ölçmek ve hataları düzeltmek için bazı teknik veriler işlenebilir. Uygulama reklam göstermek için <b>Google AdMob</b> kullanır. Analiz ve hata takibi için <b>Firebase Analytics</b> ve <b>Firebase Crashlytics</b> kullanılmaktadır.</p>
+    </div>
+
+    <h2>1) Bu Politika Ne Anlatır?</h2>
+    <p>
+      Bu Gizlilik Politikası; uygulamamızı ve web sitemizi kullandığınızda hangi verilerin işlenebileceğini,
+      bu verilerin hangi amaçlarla kullanıldığını, kimlerle paylaşılabileceğini ve sahip olduğunuz hakları açıklar.
+    </p>
+
+    <h2>2) Topladığımız / İşlediğimiz Veri Türleri</h2>
+    <p><b>Uygulamada hesap sistemi olmadığı için</b> ad, soyad, e-posta gibi kayıt verileri talep edilmez.</p>
+    <ul>
+      <li><b>Cihaz ve teknik bilgiler:</b> cihaz modeli, işletim sistemi sürümü, dil/ülke ayarı, IP adresi gibi ağ bilgileri (hizmetin çalışması ve güvenlik amaçlı).</li>
+      <li><b>Uygulama kullanım verileri (Analytics):</b> uygulama etkileşimleri ve performans metrikleri (ör. ekran görüntülenmeleri, oturum süresi, temel olaylar). Bu veriler, uygulamayı geliştirmek için kullanılır.</li>
+      <li><b>Teşhis verileri / Çökme raporları (Crashlytics):</b> uygulama çökmeleri, hata günlükleri ve teşhis bilgileri.</li>
+      <li><b>Reklam verileri (AdMob):</b> reklam gösterimi, ölçümleme ve dolandırıcılık önleme için gerekli olabilecek reklamla ilgili bilgiler. Cihazınızın reklam kimliği (Android’de AAID, iOS’ta izin verilirse IDFA) bu süreçte işlenebilir.</li>
+    </ul>
+
+    <h2>3) Verileri Hangi Amaçlarla Kullanırız?</h2>
+    <ul>
+      <li>Uygulamayı çalıştırmak ve temel işlevleri sağlamak</li>
+      <li>Performansı analiz etmek ve kullanıcı deneyimini iyileştirmek (Firebase Analytics)</li>
+      <li>Hataları tespit etmek ve uygulama kararlılığını artırmak (Firebase Crashlytics)</li>
+      <li>Reklam göstermek, reklam performansını ölçmek ve sahtekârlığı önlemek (Google AdMob)</li>
+      <li>Yasal yükümlülüklere uymak ve güvenliği sağlamak</li>
+    </ul>
+
+    <h2>4) Üçüncü Taraf Hizmetler</h2>
+    <p>
+      Uygulama aşağıdaki üçüncü taraf hizmetleri kullanır. Bu sağlayıcılar verileri kendi gizlilik politikalarına göre de işleyebilir:
+    </p>
+    <ul>
+      <li><b>Google AdMob</b> (reklam gösterimi ve ölçümleme)</li>
+      <li><b>Firebase Analytics</b> (kullanım analizi)</li>
+      <li><b>Firebase Crashlytics</b> (çökme/hata takibi)</li>
+    </ul>
+
+    <h2>5) Reklamlar ve Kişiselleştirme</h2>
+    <p>
+      Uygulama reklam içerir. Reklamlar kişiselleştirilmiş veya kişiselleştirilmemiş olabilir.
+      iOS’ta takip izni (ATT) gerektiğinde sistem izni sorulabilir; izin verilmezse kişiselleştirilmiş reklam/ölçüm sınırlanabilir.
+    </p>
+    <p>
+      Reklam kişiselleştirmesini cihaz ayarlarınız üzerinden sınırlandırabilir, reklam kimliğinizi sıfırlayabilirsiniz.
+    </p>
+
+    <h2>6) Çocukların Gizliliği (13+)</h2>
+    <p>
+      Uygulama hedef kitlesi <b>13+</b> olarak belirlenmiştir. İçerik olarak genel kitleye uygundur; ancak 13 yaş altı çocuklardan
+      bilerek kişisel veri toplamayı amaçlamayız. Eğer 13 yaş altına ait bir verinin yanlışlıkla işlendiğini düşünüyorsanız bizimle iletişime geçin.
+    </p>
+
+    <h2>7) Veri Saklama Süresi</h2>
+    <p>
+      Veriler, amaçları için gerekli olduğu süre boyunca saklanır. Teşhis ve analiz verileri genellikle uygulama geliştirme ve hata giderme
+      ihtiyaçları doğrultusunda tutulur. Yasal zorunluluklar varsa daha uzun süre saklama gerekebilir.
+    </p>
+
+    <h2>8) Güvenlik</h2>
+    <p>
+      Verilerin korunması için makul teknik ve idari önlemler uygulanır. Bununla birlikte, internet üzerinden iletim ve depolama yöntemleri
+      %100 güvenlik garantisi veremez.
+    </p>
+
+    <h2>9) Haklarınız ve İletişim</h2>
+    <p>
+      Bulunduğunuz ülkeye göre erişim, düzeltme, silme ve itiraz gibi haklara sahip olabilirsiniz.
+      Uygulamada hesap sistemi olmadığından kimlik doğrulaması sınırlı olabilir; yine de taleplerinizi inceleyip yardımcı oluruz.
+    </p>
+    <p><b>İletişim:</b> [İletişim E-postası]</p>
+
+    <h2>10) Politika Değişiklikleri</h2>
+    <p>
+      Bu Gizlilik Politikası güncellenebilir. Güncellemeler web sitemiz üzerinden yayınlanır ve gerektiğinde uygulama içinde bilgilendirme yapılır.
+    </p>
+  </main>
+</body>
+</html>
